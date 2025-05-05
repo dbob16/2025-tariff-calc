@@ -9,7 +9,7 @@ export default function OriginCountries({ setter }) {
     return (
         <select name="origin-country" id="origin-country" onChange={(e) => setter(e.target.value)}>
             {origin_countries.map((obj) => (
-                <option value={obj.tariff}>{obj.name} ({obj.tariff} %)</option>
+                <option value={obj.tariff} key={obj.id}>{obj.name} ({obj.tariff} %)</option>
             ))}
         </select>
     )

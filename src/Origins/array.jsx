@@ -1,21 +1,11 @@
 export const origin_countries = [
     {
+        id: 1,
         name: "China",
         tariff: 145
     },
     {
-        name: "Canada",
-        tariff: 25
-    },
-    {
-        name: "European Union",
-        tariff: 20
-    },
-    {
-        name: "Mexico",
-        tariff: 25
-    },
-    {
+        id: 2,
         name: "All Others",
         tariff: 10
     }
