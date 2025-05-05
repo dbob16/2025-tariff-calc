@@ -28,10 +28,7 @@ export default function App() {
         Select country of origin: <OriginCountries setter={setTariff} />
       </div>
       <div>
-        <div><label><input type="checkbox" name="custom-tariff" checked={customtariff} onChange={(e) => setCustomTariff(e.target.checked)} /> Check to enter custom tariff</label></div>
-      </div>
-      <div>
-        Or manually enter tariff: <input type="number" name="custom-tariff-v" id="custom-tariff-v" value={tariff} onChange={(e) => setTariff(e.target.value)} />
+        Or manually enter tariff: <input type="number" name="custom-tariff-v" id="custom-tariff-v" value={tariff} onChange={(e) => setTariff(e.target.value)} /> %
       </div>
       <div className='padded'>
         Retail Price: $ <input type="number" name="retail-price" id="retail-price" value={price} onChange={(e) => setPrice(e.target.valueAsNumber)} />
