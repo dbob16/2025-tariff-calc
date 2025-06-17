@@ -46,9 +46,9 @@ export default function App() {
       <br />
       <div className="results">
         <div><strong>Results</strong></div>
-        <div>The price of origin is ${calcoriginprice.toFixed(2)}</div>
-        <div>The calculated tariff cost is ${calctariffcost.toFixed(2)}</div>
-        <div>The calculated total price is ${calctotalprice.toFixed(2)} (if this isn't included in retail price already)</div>
+        <div>The price of origin is ${calcoriginprice.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+        <div>The calculated tariff cost is ${calctariffcost.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+        <div>The calculated total price is ${calctotalprice.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})} (if this isn't included in retail price already)</div>
       </div>
       <div>
         <p><strong>Input Explainers</strong></p>
