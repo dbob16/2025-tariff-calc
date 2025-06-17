@@ -21,6 +21,13 @@
   padding: 0.5em
 }
 
+.results {
+  color: #000;
+  background-color: #bbb;
+  padding: 0.5em;
+  border-radius: 0.25em;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
