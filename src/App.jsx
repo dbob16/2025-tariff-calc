@@ -14,13 +14,16 @@ export default function App() {
   const [calctotalprice, setCalcTotalPrice] = useState(0)
 
   function Calculate() {
-    const origin_price = price - (price*(distperc/100))
-    const tariff_cost = origin_price * (tariff/100)
-    const total_cost = price + tariff_cost
+    const in_price = isNaN(price) ? 0 : price
+    const in_dist = isNaN(distperc) ? 0 : distperc
+    const in_tariff = isNaN(tariff) ? 0 : tariff
+    const origin_price = in_price - (in_price*(in_dist/100))
+    const tariff_cost = origin_price * (in_tariff/100)
+    const total_cost = in_price + tariff_cost
 
-    setOriginPrice(isNaN(origin_price) ? 0 : origin_price)
-    setCalcTariffCost(isNaN(tariff_cost) ? 0 : tariff_cost)
-    setCalcTotalPrice(isNaN(total_cost) ? 0 : total_cost)
+    setOriginPrice(origin_price)
+    setCalcTariffCost(tariff_cost)
+    setCalcTotalPrice(total_cost)
   }
 
   useEffect(Calculate, calcSet)
